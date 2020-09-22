@@ -11,5 +11,14 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/java-tomcat-maven-example.war
-    - target/dependency/webapp-runner.jar
+    - '**/*'
+  secondary-artifacts:
+    artifact1:
+      files:
+        - target/java-tomcat-maven-example.war
+      name: java-tomcat-maven-example
+    artifact2:
+      files:
+        - target/dependency/webapp-runner.jar
+      name: webapp-runner
+    
